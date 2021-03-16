@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	m "chapter1/maths"
+	maths "github.com/mxmaslin/skillfactory/go/1_go_basics/chapter1/maths"
 )
 
 func main() {
-	fmt.Println(m.AdditionResult)
-	fmt.Println(m.SubtractionResult)
+	fmt.Println(maths.AdditionResult)
+	fmt.Println(maths.SubtractionResult)
 
 }
