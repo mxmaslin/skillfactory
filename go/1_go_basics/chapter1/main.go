@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	m "chapter_1/maths"
+	m "chapter1/maths"
 )
 
 func main() {
