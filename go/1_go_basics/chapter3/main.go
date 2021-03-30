@@ -7,8 +7,7 @@ import (
 
 func main() {
 
-	var number1 float64
-	var number2 float64
+	var number1, number2 float64
 	var operation string
 	var calculated string = "Результат: %v\n"
 	
