@@ -7,25 +7,20 @@ import (
 
 
 func printCharacteristics(i electronic.Phone) {
-	info := fmt.Sprintf("Бренд: %v, модель: %v, тип: %v", i.Brand(), i.Model(), i.Type())
-	addition := ". Моя ОС %v"
-	if i.Type() == "smartphone" {
-		if i.Brand() == "apple" {
-			addition = fmt.Sprintf(addition, "iOS")
-		} else {
-			addition = fmt.Sprintf(addition, "android")
-		}
-	} else {
-		addition = ". У меня 12 кнопок"
+	characteristics := fmt.Sprintf("Бренд: %v, модель: %v, тип: %v", i.Brand(), i.Model(), i.Type())
+	switch i.(type){
+	case electronic.Smartphone:
+		characteristics += fmt.Sprintf(", OC: %v", i.(electronic.Smartphone).OS())
+	case electronic.StationPhone:
+		characteristics += fmt.Sprintf(", количество кнопок: %v", i.(electronic.StationPhone).ButtonsCount())
 	}
-	info = info + addition
-	fmt.Println(info)
+	fmt.Println(characteristics)
 }
 
 func main() {
-	theApplePhone := electronic.NewApplePhone("X", 999)
-	theAndroidPhone := electronic.NewAndroidPhone("Xiaomi", "13", 666)
-	theRadioPhone := electronic.NewRadioPhone("Sanyo", "OldOne", 19, 127)
+	theApplePhone := electronic.NewApplePhone("XXX")
+	theAndroidPhone := electronic.NewAndroidPhone("Xiaomi", "13")
+	theRadioPhone := electronic.NewRadioPhone("Sanyo", "666")
 
 	printCharacteristics(theApplePhone)
 	printCharacteristics(theAndroidPhone)

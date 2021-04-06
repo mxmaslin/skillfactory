@@ -1,6 +1,13 @@
 package electronic
 
 
+const (
+	phoneTypeStationary = "station"
+	phoneTypeSmartphone = "smartphone"
+)
+
+
+
 type Phone interface {
 	Brand() string
 	Model() string
@@ -17,105 +24,77 @@ type Smartphone interface {
 
 
 
+type phone struct {
+	brand string
+	model string
+	phoneType string
+}
 
 type applePhone struct {
-	brand, model, phone_type, os string
-	price int
+	phone
 }
 
 type androidPhone struct {
-	brand, model, phone_type, os string
-	price int
+	phone
 }
 
 type radioPhone struct {
-	brand, model, phone_type string
-	price, frequency, num_buttons int
+	phone
 }
-
 
 type stationPhone struct {
-	brand, model string
-	price, num_buttons int
+	phone
 }
 
-func (p applePhone) Brand() string {
-	return "apple"
-}
 
-func (p androidPhone) Brand() string {
+
+func (p phone) Brand() string {
 	return p.brand
 }
 
-func (p radioPhone) Brand() string {
-	return p.brand
-}
-
-func (p applePhone) Model() string {
+func (p phone) Model() string {
 	return p.model
 }
 
-func (p androidPhone) Model() string {
-	return p.model
+func (p phone) Type() string {
+	return p.phoneType
 }
 
-func (p radioPhone) Model() string {
-	return p.model
-}
 
-func (p applePhone) Type() string {
-	return "smartphone"
-}
-
-func (p androidPhone) Type() string {
-	return "smartphone"
-}
-
-func (p radioPhone) Type() string {
-	return "station"
-}
 
 func (p radioPhone) ButtonsCount() int {
 	return 12
 }
 
-func (s applePhone) OS() string {
+func (p applePhone) OS() string {
 	return "iOS"
 }
 
-func (s androidPhone) OS() string {
+func (p androidPhone) OS() string {
 	return "android"
 }
 
 
-
-func NewApplePhone(model string, price int) *applePhone {
+func NewApplePhone(model string) *applePhone {
 	p := new(applePhone)
 	p.brand = "Apple"
 	p.model = model
-	p.price = price
-	p.phone_type = p.Type()
-	p.os = p.OS()
+	p.phoneType = phoneTypeSmartphone
 	return p
 }
 
-func NewAndroidPhone(brand, model string, price int) *androidPhone {
+func NewAndroidPhone(brand, model string) *androidPhone {
 	p := new(androidPhone)
 	p.brand = brand
 	p.model = model
-	p.price = price
-	p.phone_type = p.Type()
-	p.os = p.OS()
+	p.phoneType = phoneTypeSmartphone
 	return p
 }
 
-func NewRadioPhone(brand, model string, price, frequency int) *radioPhone {
+func NewRadioPhone(brand, model string) *radioPhone {
 	p := new(radioPhone)
 	p.brand = brand
 	p.model = model
-	p.price = price
-	p.frequency = frequency
-	p.phone_type = p.Type()
-	p.num_buttons = p.ButtonsCount()
+	p.phoneType = phoneTypeStationary
 	return p
 }
