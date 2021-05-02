@@ -1,0 +1,15 @@
+package int_helpers
+
+
+func GetMaxInt() int {
+	maxUint := ^uint(0) 
+	maxInt := int(maxUint >> 1) 
+	return maxInt
+}
+
+
+func GetMinInt() int {
+	maxInt := getMaxInt()
+	minInt := -maxInt - 1
+	return minInt
+}
