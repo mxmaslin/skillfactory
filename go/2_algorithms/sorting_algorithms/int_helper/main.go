@@ -9,7 +9,7 @@ func GetMaxInt() int {
 
 
 func GetMinInt() int {
-	maxInt := getMaxInt()
+	maxInt := GetMaxInt()
 	minInt := -maxInt - 1
 	return minInt
 }

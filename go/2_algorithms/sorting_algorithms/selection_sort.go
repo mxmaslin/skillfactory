@@ -71,7 +71,6 @@ func selectionSortBidirectional(arr []int) {
 					largest = arr[len(arr) - j - 1]
 					arr[len(arr) - i - 1], arr[len(arr) - j - 1] = arr[len(arr) - j - 1], arr[len(arr) - i - 1]
 				}
-				fmt.Println(i, j)
 			}
 			if arr[i] >= arr[len(arr) / 2] {
 				break
