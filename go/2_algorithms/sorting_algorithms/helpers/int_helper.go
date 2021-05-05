@@ -1,4 +1,4 @@
-package sorting
+package helpers
 
 
 func GetMaxInt() int {
