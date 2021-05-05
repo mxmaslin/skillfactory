@@ -1,10 +1,11 @@
-package main
+package sorting
+
 
 import (
 	"fmt"
 	"math/rand"
 	"time"
-	int_helper "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/int_helper"
+	sorting "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms"
 )
 
 
@@ -27,7 +28,7 @@ func main() {
 func SelectionSort(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
-			smallest := int_helper.GetMaxInt()
+			smallest := sorting.GetMaxInt()
 			for j := i; j < len(arr); j++ {
 				if arr[j] < smallest {
 					smallest = arr[j]

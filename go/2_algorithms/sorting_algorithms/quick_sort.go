@@ -1,3 +1,6 @@
+package sorting
+
+
 import (
 	"fmt"
 	"math/rand"
