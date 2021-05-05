@@ -11,7 +11,7 @@ func init() {
 	rand.Seed(time.Now().UnixNano()) // необходимо для того, чтобы рандом был похож на рандомный
 }
 
-func main() {
+func RunInsertionSort() {
 	arr := make([]int, 10)
 	for i := range arr {
 		arr[i] = rand.Intn(20) - 10 // ограничиваем случайно значение от [-100;100]

@@ -13,7 +13,7 @@ func init() {
 	rand.Seed(time.Now().UnixNano()) // необходимо для того, чтобы рандом был похож на рандомный
 }
 
-func main() {
+func RunSelectionSort() {
 	arr := make([]int, 10)
 	for i := range arr {
 		arr[i] = rand.Intn(20) - 10 // ограничиваем случайно значение от [-100;100]
@@ -41,7 +41,7 @@ func SelectionSort(arr []int) {
 }
 
 
-func selectionSortDesc(arr []int) {
+func SelectionSortDesc(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
 			largest := helpers.GetMinInt()
@@ -57,7 +57,7 @@ func selectionSortDesc(arr []int) {
 }
 
 
-func selectionSortBidirectional(arr []int) {
+func SelectionSortBidirectional(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
 			smallest := helpers.GetMaxInt()
