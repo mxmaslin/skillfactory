@@ -1,8 +1,8 @@
-package tests
+package algorithms
 
 import (
 	"math/rand"
-	sorting "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms"
+	helpers "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/helpers"
 )
 
 
@@ -21,7 +21,7 @@ func BubbleSort(arr []int) {
 func SelectionSort(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
-			smallest := sorting.GetMaxInt()
+			smallest := helpers.GetMaxInt()
 			for j := i; j < len(arr); j++ {
 				if arr[j] < smallest {
 					smallest = arr[j]

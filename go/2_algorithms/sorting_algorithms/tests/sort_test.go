@@ -1,4 +1,4 @@
-package sorting
+package tests
 
 
 import (
@@ -27,7 +27,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(10, 10)
 			b.StartTimer()
-			sorting.BubbleSort(arr)
+			tests.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
@@ -37,7 +37,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(100, 1000)
 			b.StartTimer()
-			sorting.BubbleSort(arr)
+			tests.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
@@ -47,7 +47,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(10000, 100000)
 			b.StartTimer()
-			sorting.BubbleSort(arr)
+			tests.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
