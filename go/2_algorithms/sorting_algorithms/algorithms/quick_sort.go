@@ -1,4 +1,4 @@
-package algorithms
+package main
 
 
 import (
@@ -11,7 +11,7 @@ func init() {
 	rand.Seed(time.Now().UnixNano()) // необходимо для того, чтобы рандом был похож на рандомный
 }
 
-func RunQuickSort() {
+func main() {
 	arr := make([]int, 50)
 	for i := range arr {
 		arr[i] = rand.Intn(200) - 100 // ограничиваем случайно значение от [-100;100]

@@ -1,4 +1,4 @@
-package algorithms
+package main
 
 import (
 	"fmt"
@@ -11,10 +11,11 @@ func init() {
 	rand.Seed(time.Now().UnixNano()) // необходимо для того, чтобы рандом был похож на рандомный
 }
 
-func RunBubbleSort() {
-	arr := make([]int, 10)
+
+func main() {
+	arr := make([]int, 50)
 	for i := range arr {
-		arr[i] = rand.Intn(20) - 10 // ограничиваем случайно значение от [-100;100]
+		arr[i] = rand.Intn(200) - 100 // ограничиваем случайно значение от [-100;100]
 	}
 
 	fmt.Println(arr)
