@@ -2,12 +2,8 @@ package tests
 
 
 import (
-	// "fmt"
-	// "time"
-	// int_helper "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/int_helper"
 	"math/rand"
 	"testing"
-	sorting "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms"
 )
 
 
@@ -27,7 +23,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(10, 10)
 			b.StartTimer()
-			tests.BubbleSort(arr)
+			testing.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
@@ -37,7 +33,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(100, 1000)
 			b.StartTimer()
-			tests.BubbleSort(arr)
+			testing.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
@@ -47,7 +43,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			arr := generateSlice(10000, 100000)
 			b.StartTimer()
-			tests.BubbleSort(arr)
+			testing.BubbleSort(arr)
 			b.StopTimer()
 		}
 	})
