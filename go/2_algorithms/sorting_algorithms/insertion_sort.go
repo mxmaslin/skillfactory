@@ -19,12 +19,12 @@ func main() {
 	}
 
 	fmt.Println(arr)
-	insertionSort(arr)
+	InsertionSort(arr)
 	fmt.Println(arr)
 }
 
 
-func insertionSort(arr []int) {
+func InsertionSort(arr []int) {
 	j := 0
 	for i := 1; i < len(arr); i++ {
 		key := arr[i]

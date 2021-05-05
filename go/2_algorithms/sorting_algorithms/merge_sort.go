@@ -17,7 +17,7 @@ func main() {
 	}
 
 	fmt.Println(arr)
-	arr = mergeSort(arr)
+	arr = MergeSort(arr)
 	fmt.Println(arr)
 }
 
@@ -52,7 +52,7 @@ func merge(left, right []int) []int {
 }
 
 
-func mergeSort(arr []int) []int {
+func MergeSort(arr []int) []int {
 	length := len(arr)
 
 	if length == 1 {
@@ -72,5 +72,5 @@ func mergeSort(arr []int) []int {
     	}
     }
 
-    return merge(mergeSort(left), mergeSort(right))
+    return merge(MergeSort(left), MergeSort(right))
 }

@@ -14,15 +14,15 @@ func main() {
 		arr[i] = rand.Intn(200) - 100 // ограничиваем случайно значение от [-100;100]
 	}
 
-	quickSort(arr)
+	QuickSort(arr)
 
 	fmt.Println(arr)
 }
 
 
-func quickSort(arr []int) {
+func QuickSort(arr []int) []int {
     if len(arr) < 2 {
-        return a
+        return arr
     }
      
     left, right := 0, len(arr) - 1
@@ -40,8 +40,8 @@ func quickSort(arr []int) {
      
     arr[left], arr[right] = arr[right], arr[left]
      
-    quickSort(arr[:left])
-    quickSort(arr[left+1:])
+    QuickSort(arr[:left])
+    QuickSort(arr[left+1:])
      
     return arr
 }

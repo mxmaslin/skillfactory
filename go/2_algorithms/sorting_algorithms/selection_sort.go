@@ -19,12 +19,12 @@ func main() {
 	}
 
 	fmt.Println(arr)
-	selectionSortBidirectional(arr)
+	SelectionSortBidirectional(arr)
 	fmt.Println(arr)
 }
 
 
-func selectionSort(arr []int) {
+func SelectionSort(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
 			smallest := int_helper.GetMaxInt()
