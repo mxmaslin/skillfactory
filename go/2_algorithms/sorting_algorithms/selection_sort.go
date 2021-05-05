@@ -44,7 +44,7 @@ func SelectionSort(arr []int) {
 func selectionSortDesc(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
-			largest := int_helper.GetMinInt()
+			largest := sorting.GetMinInt()
 			for j := i; j < len(arr); j++ {
 				if arr[j] > largest {
 					largest = arr[j]
@@ -60,8 +60,8 @@ func selectionSortDesc(arr []int) {
 func selectionSortBidirectional(arr []int) {
 	if len(arr) > 1 {
 		for i := 0; i < len(arr); i++ {
-			smallest := int_helper.GetMaxInt()
-			largest := int_helper.GetMinInt()
+			smallest := sorting.GetMaxInt()
+			largest := sorting.GetMinInt()
 
 			for j := i; j < len(arr); j++ {
 				if arr[j] < smallest {
