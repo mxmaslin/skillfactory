@@ -2,7 +2,7 @@ package algorithms
 
 import (
 	"math/rand"
-	int_helper "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/int_helper"
+	int_helper "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms"
 )
 
 

@@ -7,7 +7,7 @@ import (
 	// int_helper "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/int_helper"
 	"math/rand"
 	"testing"
-	algorithms "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms/tests"
+	algorithms "github.com/mxmaslin/skillfactory/go/2_algorithms/sorting_algorithms"
 )
 
 
